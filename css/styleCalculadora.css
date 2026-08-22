@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: #3f413d;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  touch-action: manipulation;
+}
+
+.container {
+  background-image: linear-gradient(to left, #ff6662, #f98062, #ff9065);
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  font-size: 1.2rem;
+}
+
+.calculator{
+  background-color: #eae4d3;
+  padding: 3vh 3vh 3vh 3vh;
+  border-radius: 1rem;
+  box-shadow: 0 10px 10px 0 #d35652;
+  font-size: 2rem;
+  width: 90%;
+}
+
+#display {
+  background-color: #fdf8fd;
+  padding: 15px;
+  border-radius: 0.5rem;
+  text-align: right;
+  height: 5vh;
+  width: 80%;
+  margin: 0.5rem;
+}
+
+.displayText {
+  background-color: #fdf8fd;
+  padding: 15px;
+  border-radius: 0.5rem;
+  text-align: right;
+  height: 5vh;
+  width: 10%;
+  margin: 0.5rem;
+}
+
+.calculatorButtons{
+  width: 4rem;
+  height: 3rem;
+  border: none;
+  margin: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: #fef9ff;
+  box-shadow: 0 4px #cac5b6;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.displayButtons{
+  width: auto;
+  border: none;
+  margin: 0;
+  border-radius: 0.5rem;
+  background-color: #fef9ff;
+  box-shadow: 0 4px #cac5b6;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.calculatorButtons:active {
+  box-shadow: 0 2px #cac5b6;
+}
+
+#cleanDisplay, #deleteDigit, #division, #multiplication, #subtraction, #sum, #result{
+  background-color: #928686;
+  color: #fdfffc;
+}
+
+#result{
+  height: 6.8rem;
+}
+
+#num0{
+  width: 8.7rem;
+}
+
+.partialResult {
+  background-image: linear-gradient(to right, #ff6662, #f98062, #ff9065);
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  font-size: 2rem;
+}
+
+/* tab system */
+/* Container styling */
+.tab-container {
+  color: #3f413d;
+  width: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation Header */
+.tab-menu {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Tab Buttons styled from divs */
+.tab-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-bottom: none;
+    margin-bottom: -2px;
+    background-color: #f1f1f1;
+    transition: 0.3s;
+}
+
+.tab-btn:hover {
+    background-image: linear-gradient(to left, #ff6662, #f98062, #ff9065);
+}
+
+/* Active Tab Navigation styling */
+.tab-btn.active {
+    background-image: linear-gradient(to left, #ff6662, #f98062, #ff9065);
+    border-color: #ccc;
+    border-bottom: 2px solid #fff;
+    font-weight: bold;
+    color: white;
+}
+
+/* Tab Content Panel styling */
+.tab-pane {
+    display: none; /* Hide content by default */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Active Content Panel styling */
+.tab-pane.active {
+    display: block; /* Show active panel */
+}

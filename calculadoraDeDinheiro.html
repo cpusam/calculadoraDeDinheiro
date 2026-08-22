@@ -1,0 +1,221 @@
+
+
+<!DOCTYPE html>
+<html lang="pt_BR" id="html-tag">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes e troco</title>
+    <link rel="stylesheet" href="css/styleCalculadora.css">
+</head>
+<body>
+
+    <!-- Language Selector Dropdown -->
+    <!--
+    <select id="lang-switcher">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="pt_BR">Português Brasileiro</option>
+    </select>
+    -->
+
+    <div class="tab-container">
+      <!-- Tab Navigation Links -->
+      <div class="tab-menu">
+          <div class="tab-btn active" data-target="tab1">Moedas</div>
+          <div class="tab-btn" data-target="tab2">Cédulas</div>
+      </div>
+
+      <!-- Tab Content Panes -->
+      <div class="tab-content container">
+        <div id="tab1" class="tab-pane active container">
+          <div class="moedasInput">
+            <table>
+              <tr>
+                <td>
+                  <label>Moedas de 5 centavos<input type="text" readonly id="moedas05C" style="displayText"></label>
+                  <button onclick="deleteConteudo('moedas05C')" class="displayButtons">DEL</button>
+                  <button onclick="calcTmpValor('moedas05C', 'valorMoedas05C')" class="displayButtons">CALC</button>
+                  <div id="valorMoedas05C" class="partialResult" hidden></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Moedas de 10 centavos<input type="text" readonly id="moedas10C"></label>
+                  <button onclick="deleteConteudo('moedas10C')" class="displayButtons">DEL</button>
+                  <button onclick="calcTmpValor('moedas10C', 'valorMoedas10C')" class="displayButtons">CALC</button>
+                  <div id="valorMoedas10C" class="partialResult" hidden></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Moedas de 25 centavos<input type="text" readonly id="moedas25C"></label>
+                  <button onclick="deleteConteudo('moedas25C')" class="displayButtons">DEL</button>
+                  <button onclick="calcTmpValor('moedas25C', 'valorMoedas25C')" class="displayButtons">CALC</button>
+                  <div id="valorMoedas25C" class="partialResult" hidden></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Moedas de 50 centavos<input type="text" readonly id="moedas50C"></label>
+                  <button onclick="deleteConteudo('moedas50C')" class="displayButtons">DEL</button>
+                  <button onclick="calcTmpValor('moedas50C', 'valorMoedas50C')" class="displayButtons">CALC</button>
+                  <div id="valorMoedas50C" class="partialResult" hidden></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Moedas de 1 real<input type="text" readonly id="moedas1R"></label>
+                  <button onclick="deleteConteudo('moedas1R')" class="displayButtons">DEL</button>
+                  <button onclick="calcTmpValor('moedas1R', 'valorMoedas1R')" class="displayButtons">CALC</button>
+                  <div id="valorMoedas1R" class="partialResult" hidden></div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        
+        <div id="tab2" class="tab-pane container">
+          <div class="cedulasInput">
+            <table>
+              <tr>
+                <td>
+                  <label>Cédulas de 2 reais<input type="text" readonly id="cedulas2R"></label>
+                  <button onclick="deleteConteudo('cedulas2R')" class="displayButtons">DEL</button>
+                  <button onclick="calcTmpValor('cedulas2R', 'valorCedulas2R')" class="displayButtons">CALC</button>
+                  <div id="valorCedulas2R" class="partialResult" hidden></div>
+                </td>
+                <td id="valorCedulas2R" hidden></td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Cédulas de 5 reais<input type="text" readonly id="cedulas5R"></label>
+                  <button onclick="deleteConteudo('cedulas5R')" class="displayButtons">DEL</button>
+                  <button onclick="calcTmpValor('cedulas5R', 'valorCedulas5R')" class="displayButtons">CALC</button>
+                  <div id="valorCedulas5R" class="partialResult" hidden></div>
+                </td>
+                <td id="valorCedulas2R" hidden></td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Cédulas de 10 reais<input type="text" readonly id="cedulas10R"></label>
+                  <button onclick="deleteConteudo('cedulas10R')" class="displayButtons">DEL</button>
+                  <button onclick="calcTmpValor('cedulas10R', 'valorCedulas10R')" class="displayButtons">CALC</button>
+                  <div id="valorCedulas10R" class="partialResult" hidden></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Cédulas de 20 reais<input type="text" readonly id="cedulas20R"></label>
+                  <button onclick="deleteConteudo('cedulas20R')" class="displayButtons">DEL</button>
+                  <button onclick="calcTmpValor('cedulas20R', 'valorCedulas20R')" class="displayButtons">CALC</button>
+                  <div id="valorCedulas20R" class="partialResult" hidden></div>
+                </td>
+                <td id="valorCedulas2R" hidden></td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Cédulas de 50 reais<input type="text" readonly id="cedulas50R"></label>
+                  <button onclick="deleteConteudo('cedulas50R')" class="displayButtons">DEL</button>
+                  <button onclick="calcTmpValor('cedulas50R', 'valorCedulas50R')" class="displayButtons">CALC</button>
+                  <div id="valorCedulas50R" class="partialResult" hidden></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Cédulas de 100 reais<input type="text" readonly id="cedulas100R"></label>
+                  <button onclick="deleteConteudo('cedulas100R')" class="displayButtons">DEL</button>
+                  <button onclick="calcTmpValor('cedulas100R', 'valorCedulas100R')" class="displayButtons">CALC</button>
+                  <div id="valorCedulas100R" class="partialResult" hidden></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Cédulas de 200 reais<input type="text" readonly id="cedulas200R"></label>
+                  <button onclick="deleteConteudo('cedulas200R')" class="displayButtons">DEL</button>
+                  <button onclick="calcTmpValor('cedulas200R', 'valorCedulas200R')" class="displayButtons">CALC</button>
+                  <div id="valorCedulas200R" hidden></div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        // Select all tab navigation buttons and content panes
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and panels
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                // Read target ID from data-target attribute and show corresponding panel
+                const targetId = button.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    </script>
+    
+    <div id="claculadoraValores">
+      <div>
+        <div class="container">
+          <div id="totalResult" class="container">
+            <table>
+              <tr>
+                <td>
+                  <label>Total Moedas em reais<input type="text" id="resultMoedasElement" readonly></label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Total Cédulas em reais<input type="text" id="resultCedulasElement" readonly></label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Total Dinheiro Todo em reais<input type="text" id="resultElement" readonly></label>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="calculator">
+            <table>
+              <tr>
+                <td><button class="calculatorButtons" id="cleanDisplay" value="C">C</td>
+                <td><button class="calculatorButtons" id="deleteDigit" value="CE">&lt;-</td>
+              </tr>
+              <tr>
+                <td><button class="calculatorButtons" id="num7" value="7">7</td>
+                <td><button class="calculatorButtons" id="num8" value="8">8</td>
+                <td><button class="calculatorButtons" id="num9" value="9">9</td>
+              </tr>
+              <tr>
+                <td><button class="calculatorButtons" id="num4" value="4">4</td>
+                <td><button class="calculatorButtons" id="num5" value="5">5</td>
+                <td><button class="calculatorButtons" id="num6" value="6">6</td>
+              </tr>
+              <tr>
+                <td><button class="calculatorButtons" id="num1" value="1">1</td>
+                <td><button class="calculatorButtons" id="num2" value="2">2</td>
+                <td><button class="calculatorButtons" id="num3" value="3">3</td>
+                <td rowspan="2"><button class="calculatorButtons" id="result" value="=">=</td>
+                
+              </tr>
+              <tr>
+                <td colspan="2"><button class="calculatorButtons" id="num0" value="0">0</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </duv>
+    <script src="./js/calculadoraDeDinheiro.js"></script>
+</body>
+</html>

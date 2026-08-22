@@ -1,0 +1,49 @@
+.questionText .containerQuestion {
+  background-color: #fdf8fd;
+  padding: 15px;
+  border-radius: 0.5rem;
+  text-align: right;
+  height: auto;
+  margin: 0.5rem;
+  overflow-x: hidden;
+}
+
+.feedbackResultAcertou {
+  background-color: springgreen;
+  padding: 15px;
+  border-radius: 0.5rem;
+  text-align: center;
+  height: auto;
+  margin: 0.5rem;
+}
+
+.feedbackResultErrou {
+  background-color: red;
+  padding: 15px;
+  border-radius: 0.5rem;
+  text-align: center;
+  height: auto;
+  margin: 0.5rem;
+}
+
+.containerQuestion {
+  background-image: linear-gradient(to left, #ff6662, #f98062, #ff9065);
+  height: auto;
+  width: 100vw;
+  background-size: cover;
+  display: inline-block;
+  justify-content: left;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.finalResult {
+  background-image: linear-gradient(to left, #ff6662, #f98062, #ff9065);
+  height: auto;
+  width: 100vw;
+  background-size: cover;
+  display: inline-block;
+  justify-content: left;
+  text-align: center;
+  overflow-x: hidden;
+}
