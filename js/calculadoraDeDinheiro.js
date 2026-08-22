@@ -208,15 +208,8 @@ btnCleanDisplay.onclick = function () {
   pointCounter = 0;
 };
 
-function calculateResult(value) {
-  
-}
-
 function deleteLastDigit() {
   if (display.value.length > 0) {
-    if (display.value[display.value.length - 1] === ".") {//If the deleted character is a decimal point, it can be replaced by a new one
-      pointCounter = 0;
-    }
     display.value = display.value.substring(0, display.value.length - 1);
   }
 }
@@ -241,12 +234,4 @@ function selectDisplay(event) {
   }
   display = event.target;
   display.style.backgroundColor = 'springgreen';
-}
-
-function verifyDecimalPoint(valorDigitado) {
-  if (valorDigitado === ".") {
-    return true;
-  } else {
-    return false;
-  }
 }
