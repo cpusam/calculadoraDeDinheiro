@@ -201,6 +201,8 @@ btnDeleteDigit.onclick = function () {
 
 btnCleanDisplay.onclick = function () {
   resultElement.value = "";
+  resultMoedasElement.value = "";
+  resultCedulasElement.value = "";
   for (var i = 0; i < displayArray.length; i++) {
     var d = displayArray[i];
     d.value = "";
