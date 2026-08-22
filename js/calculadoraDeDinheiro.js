@@ -176,8 +176,10 @@ btnResult.onclick = function () {
   var valueCedulas = 0;
   for (var i = 0; i < displayArray.length; i++) {
     var d = displayArray[i];
-    valueMoedas += calcValueDisplay(d);
-    valueCedulas += calcValueDisplay(d);
+    if (d.id.indexOf('moedas') > -1)
+      valueMoedas += calcValueDisplay(d);
+    else
+      valueCedulas += calcValueDisplay(d);
   }
   
   const valueTotal = valueMoedas + valueCedulas;
